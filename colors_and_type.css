@@ -1,0 +1,302 @@
+/* =========================================================================
+   Ilex Garden — Design System Foundation
+   colors_and_type.css
+
+   Import once at the top of any prototype:
+     <link rel="stylesheet" href="colors_and_type.css">
+   ========================================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* ---------------------------------------------------------------------
+     PALETTE — soft warm earth tones
+     Named after rainforest layers so the metaphor stays tangible in code.
+     --------------------------------------------------------------------- */
+
+  /* Sage — primary brand. The understory. */
+  --sage-50:  #f1f4ec;
+  --sage-100: #e2e9d8;
+  --sage-200: #c8d4b6;
+  --sage-300: #a8b894;   /* primary */
+  --sage-400: #8a9c75;
+  --sage-500: #6f815c;
+  --sage-600: #586848;
+  --sage-700: #424f37;
+  --sage-800: #2e3826;
+
+  /* Bark — warm neutral browns/beiges. The forest floor. */
+  --bark-50:  #faf6ec;
+  --bark-100: #f4ede0;   /* page bg */
+  --bark-200: #e6dcc4;   /* card bg / divider */
+  --bark-300: #d4c4a0;
+  --bark-400: #b8a075;
+  --bark-500: #8c7654;
+  --bark-600: #6b5a3f;
+  --bark-700: #4a3e2c;
+  --bark-800: #2a241a;   /* deepest text */
+
+  /* Sky — dusty blue. The canopy gap, the window. */
+  --sky-50:  #eef3f7;
+  --sky-100: #dde6ed;
+  --sky-200: #bac8d6;   /* primary */
+  --sky-300: #95a8bd;
+  --sky-400: #708aa3;
+  --sky-500: #506e87;
+  --sky-600: #3a526a;
+
+  /* Ember — soft terracotta. Late afternoon sun. */
+  --ember-50:  #faeee5;
+  --ember-100: #f3dcc8;
+  --ember-200: #e8c1a3;
+  --ember-300: #e0a988;   /* primary */
+  --ember-400: #cd8a64;
+  --ember-500: #b06b46;
+  --ember-600: #8a5232;
+
+  /* ---------------------------------------------------------------------
+     SEMANTIC — what code references
+     --------------------------------------------------------------------- */
+
+  /* Surfaces */
+  --surface-page:    var(--bark-100);     /* default canvas */
+  --surface-card:    #fbf8ef;             /* slightly lifted card */
+  --surface-sunk:    var(--bark-200);     /* inset / muted */
+  --surface-deep:    var(--sage-800);     /* dark mode / contrast block */
+  --surface-canopy:  var(--sage-700);     /* alt dark surface */
+
+  /* Foreground */
+  --fg-1:            var(--bark-800);     /* primary text */
+  --fg-2:            var(--bark-700);     /* secondary text */
+  --fg-3:            var(--bark-600);     /* tertiary, captions */
+  --fg-4:            var(--bark-500);     /* placeholder / muted */
+  --fg-on-deep:      var(--bark-100);     /* text on dark surfaces */
+  --fg-on-deep-2:    var(--sage-200);     /* secondary text on dark */
+
+  /* Brand accents */
+  --accent-primary:  var(--sage-500);     /* primary action */
+  --accent-press:    var(--sage-600);
+  --accent-hover:    var(--sage-400);
+  --accent-window:   var(--sky-400);      /* "window" — possibility */
+  --accent-mirror:   var(--sky-200);      /* "mirror" — reflection */
+  --accent-warm:     var(--ember-400);    /* warm callouts */
+
+  /* Lines */
+  --line-soft:       rgba(74, 62, 44, 0.10);   /* hairlines */
+  --line-medium:     rgba(74, 62, 44, 0.18);
+  --line-strong:     rgba(74, 62, 44, 0.32);
+
+  /* Status (kept earthy — no neon greens/reds) */
+  --status-grow:     var(--sage-500);
+  --status-pause:    var(--ember-400);
+  --status-rest:     var(--sky-400);
+
+  /* ---------------------------------------------------------------------
+     TYPOGRAPHY — Figtree (humanist sans, variable)
+     Italic from same family for emphasis. JetBrains Mono for code only.
+     --------------------------------------------------------------------- */
+  --font-sans:   'Figtree', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono:   'JetBrains Mono', ui-monospace, 'SFMono-Regular', monospace;
+
+  /* Weights — Figtree variable supports 300–900 */
+  --w-light:    300;
+  --w-regular:  400;
+  --w-medium:   500;
+  --w-semibold: 600;
+  --w-bold:     700;
+
+  /* Type scale — modular, slightly tightened for editorial feel */
+  --t-display:   clamp(48px, 6vw, 72px);   /* hero */
+  --t-h1:        clamp(36px, 4.2vw, 52px);
+  --t-h2:        clamp(28px, 3vw, 38px);
+  --t-h3:        22px;
+  --t-h4:        18px;
+  --t-body:      17px;        /* slightly larger than default — readability */
+  --t-small:     15px;
+  --t-caption:   13px;
+  --t-overline:  12px;
+
+  /* Line height + tracking */
+  --lh-tight:   1.08;
+  --lh-snug:    1.25;
+  --lh-normal:  1.5;
+  --lh-relaxed: 1.65;
+
+  --track-tight:  -0.02em;
+  --track-normal: 0;
+  --track-wide:   0.08em;
+
+  /* ---------------------------------------------------------------------
+     SPACING — 4pt base, generous at the top
+     --------------------------------------------------------------------- */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  24px;
+  --space-6:  32px;
+  --space-7:  48px;
+  --space-8:  64px;
+  --space-9:  96px;
+  --space-10: 128px;
+
+  /* ---------------------------------------------------------------------
+     RADII — soft, organic; nothing perfectly square
+     --------------------------------------------------------------------- */
+  --r-xs:  4px;
+  --r-sm:  8px;
+  --r-md:  14px;
+  --r-lg:  20px;
+  --r-xl:  28px;
+  --r-pill: 999px;
+
+  /* ---------------------------------------------------------------------
+     SHADOWS — low, warm-tinted, never harsh
+     --------------------------------------------------------------------- */
+  --shadow-leaf:  0 1px 2px rgba(74, 62, 44, 0.06), 0 2px 6px rgba(74, 62, 44, 0.04);
+  --shadow-rest:  0 2px 8px rgba(74, 62, 44, 0.08), 0 8px 24px rgba(74, 62, 44, 0.04);
+  --shadow-lift:  0 4px 12px rgba(74, 62, 44, 0.10), 0 16px 36px rgba(74, 62, 44, 0.06);
+  --shadow-canopy:0 12px 40px rgba(74, 62, 44, 0.16), 0 32px 64px rgba(74, 62, 44, 0.08);
+  --shadow-inset: inset 0 1px 2px rgba(74, 62, 44, 0.08);
+
+  /* ---------------------------------------------------------------------
+     MOTION
+     --------------------------------------------------------------------- */
+  --ease-unfurl: cubic-bezier(.22, .61, .36, 1);   /* fern unfurling */
+  --ease-settle: cubic-bezier(.4, 0, .2, 1);
+  --ease-rise:   cubic-bezier(.16, 1, .3, 1);
+  --t-quick:  160ms;
+  --t-base:   240ms;
+  --t-slow:   420ms;
+  --t-tide:   720ms;
+}
+
+/* ===========================================================================
+   BASE STYLES
+   =========================================================================== */
+
+html, body {
+  background: var(--surface-page);
+  color: var(--fg-1);
+  font-family: var(--font-sans);
+  font-size: var(--t-body);
+  line-height: var(--lh-normal);
+  font-weight: var(--w-regular);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ---------- Headings ---------- */
+h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
+  font-family: var(--font-sans);
+  color: var(--fg-1);
+  font-weight: var(--w-semibold);
+  letter-spacing: var(--track-tight);
+  text-wrap: balance;
+}
+
+h1, .h1 {
+  font-size: var(--t-h1);
+  line-height: var(--lh-tight);
+  font-weight: var(--w-semibold);
+}
+
+.display {
+  font-size: var(--t-display);
+  line-height: var(--lh-tight);
+  font-weight: var(--w-light);          /* light weight at large sizes — more editorial */
+  letter-spacing: -0.025em;
+}
+
+h2, .h2 {
+  font-size: var(--t-h2);
+  line-height: var(--lh-snug);
+  font-weight: var(--w-medium);
+}
+
+h3, .h3 {
+  font-size: var(--t-h3);
+  line-height: var(--lh-snug);
+  font-weight: var(--w-semibold);
+}
+
+h4, .h4 {
+  font-size: var(--t-h4);
+  line-height: var(--lh-snug);
+  font-weight: var(--w-semibold);
+}
+
+/* ---------- Body & utility ---------- */
+p {
+  font-size: var(--t-body);
+  line-height: var(--lh-relaxed);
+  color: var(--fg-1);
+  text-wrap: pretty;
+  max-width: 68ch;
+}
+
+.lead {
+  font-size: 21px;
+  line-height: 1.5;
+  font-weight: var(--w-regular);
+  color: var(--fg-2);
+}
+
+.small,
+small {
+  font-size: var(--t-small);
+  color: var(--fg-3);
+}
+
+.caption {
+  font-size: var(--t-caption);
+  color: var(--fg-3);
+  line-height: var(--lh-normal);
+}
+
+.overline {
+  font-size: var(--t-overline);
+  text-transform: uppercase;
+  letter-spacing: var(--track-wide);
+  font-weight: var(--w-medium);
+  color: var(--fg-3);
+}
+
+/* Editorial italic — used sparingly for emphasis and the "pause to reflect" feel */
+.editorial {
+  font-style: italic;
+  font-weight: var(--w-light);
+  color: var(--fg-2);
+}
+
+code, .mono {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  background: var(--surface-sunk);
+  padding: 2px 6px;
+  border-radius: var(--r-xs);
+  color: var(--fg-2);
+}
+
+a {
+  color: var(--accent-primary);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color var(--t-quick) var(--ease-settle);
+}
+a:hover {
+  color: var(--accent-press);
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: var(--line-soft);
+  margin: var(--space-6) 0;
+}
+
+::selection {
+  background: var(--sage-200);
+  color: var(--bark-800);
+}
