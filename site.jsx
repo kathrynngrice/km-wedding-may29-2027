@@ -197,7 +197,7 @@ function DuskFooter({ children }) {
       <div className="dusk-foot">
         <ShakerChair size={52} color="#e6c79a" />
         <div className="names" style={{ marginTop: 10 }}><Names /></div>
-        <div className="small">{W.dayName}, {W.dateLong} · Pittsfield, Massachusetts</div>
+        <div className="small">{W.dayName}, {W.dateLong} · Hancock, Massachusetts</div>
       </div>
     </footer>);
 
