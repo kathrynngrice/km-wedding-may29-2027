@@ -1,4 +1,4 @@
-// site.jsx — shared building blocks for the Ruins at Sassafras wedding site.
+// site.jsx — shared building blocks for the HSV wedding site.
 // Depends on (loaded first, exported to window): Hills, Grasses, Mountains,
 // StringLights, ShakerChair, FactoryRuin (scenes.jsx); Lupin, Lavender, Yarrow,
 // Rose, Greenery (botanicals.jsx).
@@ -11,15 +11,14 @@ const W = {
   full1: 'Kathryn Noe Grice',
   full2: 'Matthew Scott Harmon',
   dayName: 'Saturday',
-  dateLong: 'May 22, 2027',
-  dateISO: '2027-05-22T15:00:00-04:00',
-  venue: 'The Ruins at Sassafras',
-  addr: '194 Darrow Road, New Lebanon, NY 12125',
-  directionsUrl: 'https://www.google.com/maps/dir/?api=1&destination=194+Darrow+Road,+New+Lebanon,+NY+12125',
-  mapUrl: 'https://www.google.com/maps/search/?api=1&query=194+Darrow+Road,+New+Lebanon,+NY+12125',
+  dateLong: 'May 29, 2027',
+  dateISO: '2027-05-29T15:00:00-04:00',
+  venue: 'Hancock Shaker Village',
+  addr: '34 Lebanon Mountain Rd., Hancock, MA 01237',
+  mapUrl: 'https://www.google.com/maps/search/?api=1&query=34+Lebanon+Mountain+Rd,+Hancock,+MA+01237',
   rsvpUrl: '#rsvp-form-url', // ← replace with your Google Form / RSVP link
   staysUrl: 'https://drive.google.com/file/d/1shM3svGAIcuRZ0cHwwzZ8ykqE_p9mcRV/view',
-  aboutVenueUrl: 'https://www.sassafrasruins.com/museum',
+  aboutVenueUrl: 'https://hancockshakervillage.org',
   contactEmail: 'hello@kathrynandmatt.example'
 };
 
@@ -81,7 +80,7 @@ function Nav({ active }) {
     <nav className={'nav' + (solid ? ' solid' : '')}>
       <a className="brand" href="index.html">
         <span className="mono" style={{ fontSize: "18px", height: "25px", padding: "0px 6px 3px", backgroundColor: "rgba(230, 220, 196, 0.027)" }}>K<span className="amp" style={{ fontSize: "18px", color: "rgb(199, 110, 5)" }}>&amp;</span>M</span>
-        <span className="tag">The Ruins · 2027</span>
+        <span className="tag">HSV · 2027</span>
       </a>
       <div className="nav-links-wrap" style={{ position: 'relative', display: 'flex', alignItems: 'center', gap: 18 }}>
         <div className={'nav-links' + (open ? ' open' : '')}>
@@ -198,7 +197,7 @@ function DuskFooter({ children }) {
       <div className="dusk-foot">
         <ShakerChair size={52} color="#e6c79a" />
         <div className="names" style={{ marginTop: 10 }}><Names /></div>
-        <div className="small">{W.dayName}, {W.dateLong} · New Lebanon, New York</div>
+        <div className="small">{W.dayName}, {W.dateLong} · Pittsfield, Massachusetts</div>
       </div>
     </footer>);
 
